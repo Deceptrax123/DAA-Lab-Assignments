@@ -8,7 +8,6 @@ int find_position(vector<int> &v, int k, int n)
 {
 
     // sorting
-    clock_t start = clock();
     int j;
     for (int i = 1; i < n; i++)
     {
@@ -34,8 +33,6 @@ int find_position(vector<int> &v, int k, int n)
         }
     }
 
-    double time = (double)(clock() - start) / CLOCKS_PER_SEC;
-    cout << "The time taken for the program to run : " << time << " seconds" << endl;
     if (flag == 1)
     {
         return pos;
@@ -61,8 +58,13 @@ int main()
         v.push_back(num);
     }
 
+    clock_t start = clock();
+
     int pos = find_position(v, k, n);
     cout << "The position of the element is " << pos << endl;
+
+    double time = (double)(clock() - start) / CLOCKS_PER_SEC;
+    cout << "The time taken for the program to run : " << time << " seconds" << endl;
 
     return 0;
 }

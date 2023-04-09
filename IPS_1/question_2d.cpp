@@ -84,7 +84,6 @@ int main()
         k++;
     }
 
-    // print sorted array
     cout << "Sorted array as per condition : " << endl;
     for (int i = 0; i < n; i++)
     {
